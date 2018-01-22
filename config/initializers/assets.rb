@@ -15,6 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 # Additional top-level stylesheet:
 Rails.application.config.assets.precompile += %w( styleguide.css )
+Rails.application.config.assets.precompile += %w( /vendor\/assets/reset.css )
 
 # Additional top-level javascript:
 Rails.application.config.assets.precompile += %w( styleguide.js )
