@@ -1,60 +1,62 @@
-<h1>UberGo Styleguide page</h1>
+<div class="container">
+  <h1>UberGo Styleguide page</h1>
 
-<h2>Layout</h2>
+  <h2>Layout</h2>
 
-<div>
-  Use <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">bootstrap 4 grid</a> for layout.
-  <br />
-  For example two columns:
+  <div>
+    Use <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">bootstrap 4 grid</a> for layout.
+    <br />
+    For example two columns:
+  </div>
+
+  <code>
+    &lt;div class="row"&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;123<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;321<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &lt;/div&gt;
+  </code>
+
+  <div>or</div>
+
+  <code>
+    &lt;div class="row"&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;123<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;321<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &lt;/div&gt;
+  </code>
+
+  <div>Result:</div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      First half
+    </div>
+    <div class="col-sm-6">
+      Second half
+    </div>
+  </div>
+
+  <div>or</div>
+
+  <div class="row">
+    <div class="col-sm">
+      First half
+    </div>
+    <div class="col-sm">
+      Second half
+    </div>
+  </div>
+
+  <h2>Css</h2>
+  <div>Top-level css files should have only (@import). Don't write any custom styles.</div>
+  <div>Use (@import) for each file. Don't use (@import "components/**/*")</div>
+  <div>List of top-level files is in: 'config/initializers/assets.rb'</div>
 </div>
-
-<code>
-  &lt;div class="row"&gt;<br />
-  &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;123<br />
-  &nbsp;&nbsp;&lt;/div&gt;<br />
-  &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;321<br />
-  &nbsp;&nbsp;&lt;/div&gt;<br />
-  &lt;/div&gt;
-</code>
-
-<div>or</div>
-
-<code>
-  &lt;div class="row"&gt;<br />
-  &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;123<br />
-  &nbsp;&nbsp;&lt;/div&gt;<br />
-  &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;321<br />
-  &nbsp;&nbsp;&lt;/div&gt;<br />
-  &lt;/div&gt;
-</code>
-
-<div>Result:</div>
-
-<div class="row">
-  <div class="col-sm-6">
-    First half
-  </div>
-  <div class="col-sm-6">
-    Second half
-  </div>
-</div>
-
-<div>or</div>
-
-<div class="row">
-  <div class="col-sm">
-    First half
-  </div>
-  <div class="col-sm">
-    Second half
-  </div>
-</div>
-
-<h2>Css</h2>
-<div>Top-level css files should have only (@import). Don't write any custom styles.</div>
-<div>Use (@import) for each file. Don't use (@import "components/**/*")</div>
-<div>List of top-level files is in: 'config/initializers/assets.rb'</div>
