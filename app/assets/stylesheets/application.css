@@ -13,4 +13,6 @@
  *= require_self
  */
 
+@import "reset";
+@import "bootstrap-grid";
 @import "global"
