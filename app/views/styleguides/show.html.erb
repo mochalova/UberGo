@@ -3,7 +3,7 @@
 
   <h2>Layout</h2>
 
-  <div>
+  <div class="text">
     Use <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">bootstrap 4 grid</a> for layout.
     <br />
     For example two columns:
@@ -33,7 +33,7 @@
     &lt;/div&gt;
   </code>
 
-  <div>Result:</div>
+  <div class="text">Result:</div>
 
   <div class="row">
     <div class="col-sm-6">
@@ -57,7 +57,7 @@
 
   <h2>Css</h2>
 
-  <ul>
+  <ul class="text">
     <li>Top-level css files should have only (@import). Don't write any custom styles.</li>
     <li>Use (@import) for each file. Don't use (@import "components/**/*")</li>
     <li>List of top-level files is in: "config/initializers/assets.rb"</li>
@@ -83,12 +83,12 @@
   </ul>
 
   <h2>Text</h2>
-  <div>Default font in site is: "Open Sans" from google-fonts. For example:</div>
-  <div>This is regular text</div>
-  <div><strong>This is bold text</strong></div>
+  <div class="text">Default font in site is: "Open Sans" from google-fonts. For example:</div>
+  <div class="text">This is regular text</div>
+  <div class="text"><strong>This is bold text</strong></div>
 
   <h2>Colors</h2>
-  <ul>
+  <ul class="text">
     <li>
       Use color-variable if it is possible. All color variables are in file:
       <code>app/assets/stylesheets/variables.scss</code>
@@ -104,17 +104,17 @@
     </li>
   </ul>
 
-  <div>Colors list:</div>
+  <div class="text">Colors list:</div>
 
   <div class="row">
     <div class="col-sm-2">
       <div class="demo-color demo-color_background_black-approx">
-        <div class="demo-color__title text_color_white-solid">$cod-gray-approx</div>
+        <div class="demo-color__title text text_color_white-solid">$cod-gray-approx</div>
       </div>
     </div>
     <div class="col-sm-2">
       <div class="demo-color demo-color_background_white-solid">
-        <div class="demo-color__title">$white-solid</div>
+        <div class="demo-color__title text">$white-solid</div>
       </div>
     </div>
   </div>
