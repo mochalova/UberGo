@@ -40,6 +40,9 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem "rspec-rails"
   gem "site_prism"
+  gem "database_cleaner"
+  gem 'pry', require: false
+  gem 'pry-rails'
 end
 
 group :development do
