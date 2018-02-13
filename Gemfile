@@ -43,6 +43,7 @@ group :development, :test do
   gem "database_cleaner"
   gem 'pry', require: false
   gem 'pry-rails'
+  gem 'simplecov', require: false
 end
 
 group :development do
