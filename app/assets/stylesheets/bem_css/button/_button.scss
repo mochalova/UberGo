@@ -1,0 +1,39 @@
+.button {
+  align-items: center;
+  background: $base;
+  box-shadow: 0 0 10px 0 rgba($base,0.5);
+  color: $white;
+  display: flex;
+  font-family: "Roboto";
+  font-size: 14px;
+  justify-content: center;
+  padding: 20px 0;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s cubic-bezier(0.53, 0.1, 0, 0.91);
+  z-index: 1;
+
+  &:hover {
+    color: $base;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    content: "";
+    -webkit-transition: all 0.5s cubic-bezier(0.53, 0.1, 0, 0.91);
+    transition: all 0.5s cubic-bezier(0.53, 0.1, 0, 0.91);
+    -webkit-transform-origin: right;
+    transform-origin: right;
+    background: $white;
+  }
+}
