@@ -23,6 +23,8 @@
 @import "bem_css/text/_color/text_color_white";
 @import "bem_css/text/_position/text_position_right";
 @import "bem_css/text/_transform/text_transform_uppercase";
+@import "bem_css/text/_size/text_size_h1";
+@import "bem_css/text/_size/text_size_h3";
 @import "bem_css/module/module";
 @import "bem_css/module/_theme/module_theme_greeting";
 @import "bem_css/module/_theme/module_theme_inner";
@@ -31,3 +33,4 @@
 @import "bem_css/button/button";
 @import "bem_css/spacer/spacer";
 @import "bem_css/spacer/_top/spacer_top-70";
+@import "bem_css/spacer/_bottom/spacer_bottom-40";
