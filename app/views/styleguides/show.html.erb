@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>UberGo Styleguide page</h1>
+  <h1 class="text text_size_h1">UberGo Styleguide page</h1>
 
-  <h2>Branches</h2>
+  <h2 class="text text_size_h2">Branches</h2>
 
   <ul>
     <li>branch name start with 'U' (UberGo)</li>
@@ -14,7 +14,7 @@
 
   <code>U-2-create-styleguide-page</code>
 
-  <h2>Project Code style</h2>
+  <h2 class="text text_size_h2">Project Code style</h2>
 
   <ul>
     <li>Add newline at end of file</li>
@@ -22,7 +22,7 @@
     <li>Use 2 spaces for indentation</li>
   </ul>
 
-  <h2>Files</h2>
+  <h2 class="text text_size_h2">Files</h2>
   <ul>
     <li>
       Don't use capital letters in file names. For example OS X is case insensitive.
@@ -32,7 +32,7 @@
     </li>
   </ul>
 
-  <h2>Layout</h2>
+  <h2 class="text text_size_h2">Layout</h2>
 
   <div class="text">
     Use <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">bootstrap 4 grid</a> for layout.
@@ -86,7 +86,7 @@
     </div>
   </div>
 
-  <h2>Css</h2>
+  <h2 class="text text_size_h2">Css</h2>
 
   <ul class="text">
     <li>Top-level css files should have only (@import). Don't write any custom styles.</li>
@@ -113,12 +113,7 @@
     </li>
   </ul>
 
-  <h2>Text</h2>
-  <div class="text">Default font in site is: "Roboto" from google-fonts. For example:</div>
-  <div class="text">This is regular text</div>
-  <div class="text"><strong>This is bold text</strong></div>
-
-  <h2>Colors</h2>
+  <h2 class="text text_size_h2">Colors</h2>
   <ul class="text">
     <li>
       Use color-variable if it is possible. All color variables are in file:
@@ -153,31 +148,82 @@
     </div>
   </div>
 
-  <h2>Headers</h2>
+  <h2 class="text text_size_h2">Text</h2>
+  <div class="text">
+    Default font in site is: "Roboto" from google-fonts.
+  </div>
+  <div class="text">
+    Block "text" has default settings:
+  </div>
+  <ul>
+    <li class="text">color: $base;</li>
+    <li class="text">font-family: "Roboto", Helvetica;</li>
+    <li class="text">font-size: 16px;</li>
+    <li class="text">font-weight: 300;</li>
+    <li class="text">line-height: 22px;</li>
+  </ul>
+  <div class="text">For example:</div>
+  <div class="text">This is regular text</div>
+  <div class="text"><strong>This is bold text</strong></div>
+
+  <h3 class="text text_size_h3">Text colors</h3>
+  <div class="text">Block "text" has color modifiers:</div>
+  <div class="text">text_color_white. Example:</div>
+  <div class="demo-color demo-color_background_base">
+    <div class="text text_color_white">This is example of "text text_color_white"</div>
+  </div>
+  <h3 class="text text_size_h3">Text position</h3>
+  <div class="text">Block "text" has position modifiers:</div>
+  <div class="text">text_position_right. Example:</div>
+  <div class="text text_position_right">This is example of "text text_position_right"</div>
+  <h3 class="text text_size_h3">Text transform</h3>
+  <div class="text">Block "text" has transform modifiers:</div>
+  <div class="text">text_transform_uppercase. Example:</div>
+  <div class="text text_transform_uppercase">
+    This is example of "text text_transform_uppercase"
+  </div>
+  <h3 class="text text_size_h3">Text size</h3>
+  <div class="text">Block "text" has size modifiers:</div>
+  <div class="text">text_size_h1. Example:</div>
+  <div class="text text_size_h1">
+    text text_size_h1
+  </div>
+  <div class="text">text_size_h2. Example:</div>
+  <div class="text text_size_h2">
+    text text_size_h2
+  </div>
+  <div class="text">text_size_h3. Example:</div>
+  <div class="text text_size_h3">
+    text text_size_h3
+  </div>
+
+  <h2 class="text text_size_h2">Headers</h2>
   <div class="text">This is example of main site header</div>
 </div>
 
-<div class="header">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-2">
-        <%= link_to("/", class: "header__link") do %>
-          <% image_tag "logo_white.svg",
-                       class: "header__logo",
-                       alt: "ubergo",
-                       title: "ubergo" %>
-        <% end %>
-      </div>
-      <div class="col-sm-3 offset-sm-7">
-        <div class="text_position_right">
-          <%= link_to "+38 (068) 355 02 73",
-                      "tel:+38 (068) 355 02 73",
-                      class: "header__link text text_color_white" %>
+<div>
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <%= link_to("/", class: "header__link") do %>
+            <% image_tag "logo_white.svg",
+                         class: "header__logo",
+                         alt: "ubergo",
+                         title: "ubergo" %>
+          <% end %>
         </div>
-        <div class="text_position_right">
-          <%= link_to "+38 (068) 373 00 78",
-                      "tel:+38 (068) 373 00 78",
-                      class: "header__link text text_color_white" %>
+        <div class="col-sm-3 offset-sm-7">
+          <div class="text_position_right">
+            <%= link_to "+38 (068) 355 02 73",
+                        "tel:+38 (068) 355 02 73",
+                        class: "header__link text text_color_white" %>
+          </div>
+          <div class="text_position_right">
+            <%= link_to "+38 (068) 373 00 78",
+                        "tel:+38 (068) 373 00 78",
+                        class: "header__link text text_color_white" %>
+          </div>
         </div>
       </div>
     </div>
@@ -185,30 +231,109 @@
 </div>
 
 <div class="container">
-  <h2>Modules</h2>
-  <h3>Greeting module</h3>
+  <h2 class="text text_size_h2">Modules</h2>
+  <div class="text">
+    Module is a container with some spaces or backgrounds
+  </div>
+  <h3 class="text text_size_h3">Greeting module</h3>
+  <div class="text">
+    Greeting module have top and bottom spaces and background image
+  </div>
 </div>
 
 <div class="module module_theme_greeting">
-  <div class="module__title text text_color_white">
-    Стань водителем UBER в Киеве
+  <div class="text text_color_white">
+    Greeting module example
   </div>
-  <div class="module__title module__title_size_sub text text_color_white">
-    ЗАРАБАТЫВАЙТЕ ДО 40000 ГРН/МЕС НА ЛУЧШИХ УСЛОВИЯХ - КОМИССИЯ 7%
+</div>
+
+<div class="container">
+  <h3 class="text text_size_h3">Inner module</h3>
+  <div class="text">
+    Inner module has padding top
   </div>
-  <div class="container">
-    <div class="spacer_top-70">
-      <div class="row">
-        <div class="col-sm-3">
-          <a href="#" class="button">Стать водителем UBER</a>
-        </div>
-        <div class="col-sm-3 offset-sm-1">
-          <a href="#" class="button">Условия</a>
-        </div>
-        <div class="col-sm-3 offset-sm-1">
-          <a href="#" class="button">Сменить партнера</a>
-        </div>
-      </div>
+</div>
+<div class="module module_theme_inner">
+  <div class="text">
+    Inner module example
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text text_size_h3">Driver module</h3>
+  <div class="text">
+    Driver module have top and bottom spaces and background image
+  </div>
+</div>
+<div class="module module_theme_driver">
+  <div class="text">
+    Driver module example
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="text text_size_h2">Spacers</h2>
+  <div class="text">
+    There is different spacers in site
+  </div>
+  <h3 class="text text_size_h3">Spacer top 70</h3>
+  <div class="text">
+    Add padding top 70px.
+  </div>
+  <div class="spacer_top-70">
+    Example spacer_top-70
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 25</h3>
+  <div class="text">
+    Add padding top 25px.
+  </div>
+  <div class="spacer_bottom-25">
+    Example spacer_bottom-25
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 40</h3>
+  <div class="text">
+    Add padding top 40px.
+  </div>
+  <div class="spacer_bottom-40">
+    Example spacer_bottom-40
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 50</h3>
+  <div class="text">
+    Add padding top 50px.
+  </div>
+  <div class="spacer_bottom-50">
+    Example spacer_bottom-50
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 75</h3>
+  <div class="text">
+    Add padding top 75px.
+  </div>
+  <div class="spacer_bottom-75">
+    Example spacer_bottom-75
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 110</h3>
+  <div class="text">
+    Add padding top 110px.
+  </div>
+  <div class="spacer_bottom-110">
+    Example spacer_bottom-110
+  </div>
+
+  <h2 class="text text_size_h2">Category-image</h2>
+  <div class="text">
+    There is category image with max-width: 100%. Example:
+  </div>
+  <%= image_tag("car_2.png", class: "category-image") %>
+
+  <h2 class="text text_size_h2">Buttons</h2>
+  <div class="text">
+    Default button has full width. You can set button width with some wrapper. Example:
+  </div>
+
+  <a href="#" class="button">Стать водителем UBER</a>
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <a href="#" class="button">Стать водителем UBER</a>
     </div>
   </div>
 </div>
