@@ -1,0 +1,31 @@
+.button_type_header-menu {
+  box-shadow: none;
+  padding: 28px 0;
+
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+  }
+
+  &::after {
+    height: 0;
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    width: 100%;
+  }
+
+  @for $iteration_step from 0 through $menu-link-total-count {
+    @if $iteration_step < $menu-link-total-count/2 {
+      $menu-link-start-color: lighten($menu-link-start-color, 5%);
+    } @else {
+      $menu-link-start-color: darken($menu-link-start-color, 4%);
+    }
+
+    &:nth-child(#{$iteration_step}) {
+      &::after {
+        background-color: $menu-link-start-color;
+      }
+    }
+  }
+}
