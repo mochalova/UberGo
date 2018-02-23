@@ -17,7 +17,7 @@
 
   $menu-link-start-color: $menu-link-start-color;
   @for $iteration_step from 0 through $menu-link-total-count {
-    @if $iteration_step < $menu-link-total-count/2 {
+    @if $iteration_step <= $menu-link-total-count/2 {
       $menu-link-start-color: lighten($menu-link-start-color, 5%);
     } @else {
       $menu-link-start-color: darken($menu-link-start-color, 4%);
