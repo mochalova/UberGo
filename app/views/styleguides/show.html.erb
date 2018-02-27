@@ -202,32 +202,7 @@
 </div>
 
 <div>
-  <div class="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-2">
-          <%= link_to("/", class: "header__link") do %>
-            <% image_tag "logo_white.svg",
-                         class: "header__logo",
-                         alt: "ubergo",
-                         title: "ubergo" %>
-          <% end %>
-        </div>
-        <div class="col-sm-3 offset-sm-7">
-          <div class="text_position_right">
-            <%= link_to "+38 (068) 355 02 73",
-                        "tel:+38 (068) 355 02 73",
-                        class: "header__link text text_color_white" %>
-          </div>
-          <div class="text_position_right">
-            <%= link_to "+38 (068) 373 00 78",
-                        "tel:+38 (068) 373 00 78",
-                        class: "header__link text text_color_white" %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render "shared/header" %>
 </div>
 
 <div class="container">
@@ -334,6 +309,17 @@
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
       <a href="#" class="button">Стать водителем UBER</a>
+    </div>
+  </div>
+
+  <h3 class="text text_size_h3">Menu button</h3>
+  <div class="text">
+    There is buttons in header menu. They have bigger height. Also they have dynamic hover background color. You can set start color in 'app/assets/stylesheets/_variables.scss' in '$menu-link-start-color'. Also you should set total header menu buttons in same file in '$menu-link-total-count'. Header button example:
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <a href="#" class="button button_type_header-menu">button button_type_header-menu</a>
     </div>
   </div>
 </div>

@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-sm-2">
+        <%= link_to("/", class: "header__link") do %>
+          <% image_tag "logo_white.svg",
+                       class: "header__logo",
+                       alt: "ubergo",
+                       title: "ubergo" %>
+        <% end %>
+      </div>
+      <div class="col-sm-7 d-flex">
+        <%= link_to "Условия",
+                    { controller: "conditions",
+                      action: "show" },
+                    class: "col button button_type_header-menu" %>
+      </div>
+      <div class="col-sm-3">
+        <div class="text_position_right">
+          <%= link_to "+38 (068) 355 02 73",
+                      "tel:+38 (068) 355 02 73",
+                      class: "header__link text text_color_white" %>
+        </div>
+        <div class="text_position_right">
+          <%= link_to "+38 (068) 373 00 78",
+                      "tel:+38 (068) 373 00 78",
+                      class: "header__link text text_color_white" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
