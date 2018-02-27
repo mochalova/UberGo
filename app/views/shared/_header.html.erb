@@ -10,8 +10,8 @@
         <% end %>
       </div>
       <div class="col-sm-7 d-flex">
-        <%= link_to "О нас",
-                    { controller: "abouts",
+        <%= link_to "Главная",
+                    { controller: "dashboards",
                       action: "show" },
                     class: "col button button_type_header-menu" %>
         <%= link_to "Условия",
@@ -20,6 +20,10 @@
                     class: "col button button_type_header-menu" %>
         <%= link_to "Тарифы",
                     { controller: "rates",
+                      action: "show" },
+                    class: "col button button_type_header-menu" %>
+        <%= link_to "О нас",
+                    { controller: "abouts",
                       action: "show" },
                     class: "col button button_type_header-menu" %>
       </div>
