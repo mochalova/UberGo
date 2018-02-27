@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resource :conditions, only: :show
   resource :abouts, only: :show
   resource :rates, only: :show
+  resource :sales, only: :show
   root 'dashboards#show'
 end
