@@ -10,6 +10,10 @@
         <% end %>
       </div>
       <div class="col-sm-7 d-flex">
+        <%= link_to "О нас",
+                    { controller: "abouts",
+                      action: "show" },
+                    class: "col button button_type_header-menu" %>
         <%= link_to "Условия",
                     { controller: "conditions",
                       action: "show" },

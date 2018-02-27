@@ -1,0 +1,10 @@
+.list__item {
+  &::before {
+    background: rgba($base, 0.2);
+    content: "";
+    display: inline-block;
+    height: 10px;
+    margin: 0 20px 0 0;
+    width: 10px;
+  }
+}
