@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resource :styleguide, only: :show
   resource :dashboard, only: :show
   resource :conditions, only: :show
+  resource :abouts, only: :show
   root 'dashboards#show'
 end
