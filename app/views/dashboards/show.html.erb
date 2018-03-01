@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <a href="#" class="button">Стать водителем UBER</a>
+        <a href="#" class="button"  data-toggle="modal" data-target=".modal">Стать водителем UBER</a>
       </div>
       <div class="col-sm-3 offset-sm-1">
         <a href="#" class="button">Условия</a>
@@ -18,6 +18,28 @@
       <div class="col-sm-3 offset-sm-1">
         <a href="#" class="button">Сменить партнера</a>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content popup">
+      <span class="popup__close" data-dismiss="modal">×</span>
+
+      <h2 class="text text_size_h3 spacer_bottom-25">Стать водителем UBER</h2>
+
+      <%= form_tag "#", method: :put, class: "form-uber" do %>
+        <div class="form-uber__item">
+          <%= text_field_tag "last-name", nil, placeholder: "Фамилия", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= select_tag "count",
+                         "<option>Киев</option>
+                          <option>Днепр</option>".html_safe,
+                          class: "form-uber__field" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
