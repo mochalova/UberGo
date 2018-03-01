@@ -357,4 +357,21 @@
       </div>
     </div>
   </div>
+
+  <h2 class="text text_size_h2">Forms</h2>
+  <div class="text">
+    Forms has class "form-uber". Also there is wrapper "form-uber__item", and fields with "form-uber__field" class. Example:
+  </div>
+
+  <%= form_tag "#", method: :put, class: "form-uber" do %>
+    <div class="form-uber__item">
+      <%= text_field_tag "last-name", nil, placeholder: "Фамилия", class: "form-uber__field" %>
+    </div>
+    <div class="form-uber__item">
+      <%= select_tag "count",
+                     "<option>Киев</option>
+                      <option>Днепр</option>".html_safe,
+                      class: "form-uber__field" %>
+    </div>
+  <% end %>
 </div>
