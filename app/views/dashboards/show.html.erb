@@ -34,11 +34,28 @@
           <%= f.text_field :last_name, placeholder: "Фамилия", class: "form-uber__field" %>
         </div>
         <div class="form-uber__item">
+          <%= f.text_field :first_name, placeholder: "Имя", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.telephone_field :phone, placeholder: "Телефон", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.email_field :email, placeholder: "Email", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.text_field :bank, placeholder: "№ Карты. Название банка", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
           <%= f.select :city, options_for_select(['Киев', 'Днепр']), {}, class: "form-uber__field" %>
         </div>
         <div class="form-uber__item">
           <%= f.fields_for :driver_license_front_attributes, f.object.build_driver_license_front do |dlff|%>
             <%= dlff.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_license_back_attributes, f.object.build_driver_license_back do |dlbf|%>
+            <%= dlbf.file_field :file, class: "form-uber__field" %>
           <% end %>
         </div>
         <div class="form-uber__item">

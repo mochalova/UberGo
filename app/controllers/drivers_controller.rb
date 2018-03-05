@@ -11,6 +11,6 @@ class DriversController < ActionController::Base
   private
 
   def driver_params
-    params.require(:driver).permit(:last_name, :city, driver_license_front_attributes: [:file])
+    params.require(:driver).permit(:last_name, :first_name, :phone, :email, :bank, :city, driver_license_front_attributes: [:file], driver_license_back_attributes: [:file])
   end
 end

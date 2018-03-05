@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 20180302143554) do
 
   create_table "drivers", force: :cascade do |t|
     t.string "last_name"
+    t.string "first_name"
+    t.string "phone"
+    t.string "email"
+    t.string "bank"
     t.string "city"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
