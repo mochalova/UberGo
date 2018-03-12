@@ -59,6 +59,21 @@
           <% end %>
         </div>
         <div class="form-uber__item">
+          <%= f.fields_for :driver_tech_front_attributes, f.object.build_driver_tech_front do |dtf|%>
+            <%= dtf.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_tech_back_attributes, f.object.build_driver_tech_back do |dtb|%>
+            <%= dtb.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_osago_attributes, f.object.build_driver_osago do |dosago|%>
+            <%= dosago.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
           <%= f.submit %>
         </div>
       <% end %>
