@@ -1,5 +1,5 @@
 class StyleguidesController < ActionController::Base
-  layout 'layouts/styleguide'
+  layout 'styleguide'
 
   def show
     # put any code here that you need

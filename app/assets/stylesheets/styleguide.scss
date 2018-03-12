@@ -1,5 +1,7 @@
 @import "reset";
 @import "bootstrap-grid";
+@import "bootstrap/mixins";
+@import "bootstrap/modal";
 @import "variables";
 @import "global";
 @import "bem_css/demo-color/demo-color";
@@ -33,3 +35,8 @@
 @import "bem_css/category-image/category-image";
 @import "bem_css/list/list";
 @import "bem_css/list/__item/list__item";
+@import "bem_css/popup/popup";
+@import "bem_css/popup/__close/popup__close";
+@import "bem_css/form-uber/form-uber";
+@import "bem_css/form-uber/__item/form-uber__item";
+@import "bem_css/form-uber/__field/form-uber__field";

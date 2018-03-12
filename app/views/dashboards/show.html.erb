@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-3">
-        <a href="#" class="button">Стать водителем UBER</a>
+        <a href="#" class="button"  data-toggle="modal" data-target=".modal">Стать водителем UBER</a>
       </div>
       <div class="col-sm-3 offset-sm-1">
         <a href="#" class="button">Условия</a>
@@ -18,6 +18,65 @@
       <div class="col-sm-3 offset-sm-1">
         <a href="#" class="button">Сменить партнера</a>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content popup">
+      <span class="popup__close" data-dismiss="modal">×</span>
+
+      <h2 class="text text_size_h3 spacer_bottom-25">Стать водителем UBER</h2>
+
+      <%= form_for Driver.new, class: "form-uber" do |f| %>
+        <div class="form-uber__item">
+          <%= f.text_field :last_name, placeholder: "Фамилия", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.text_field :first_name, placeholder: "Имя", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.telephone_field :phone, placeholder: "Телефон", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.email_field :email, placeholder: "Email", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.text_field :bank, placeholder: "№ Карты. Название банка", class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.select :city, options_for_select(['Киев', 'Днепр']), {}, class: "form-uber__field" %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_license_front_attributes, f.object.build_driver_license_front do |dlff|%>
+            <%= dlff.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_license_back_attributes, f.object.build_driver_license_back do |dlbf|%>
+            <%= dlbf.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_tech_front_attributes, f.object.build_driver_tech_front do |dtf|%>
+            <%= dtf.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_tech_back_attributes, f.object.build_driver_tech_back do |dtb|%>
+            <%= dtb.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.fields_for :driver_osago_attributes, f.object.build_driver_osago do |dosago|%>
+            <%= dosago.file_field :file, class: "form-uber__field" %>
+          <% end %>
+        </div>
+        <div class="form-uber__item">
+          <%= f.submit %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

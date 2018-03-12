@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   resource :abouts, only: :show
   resource :rates, only: :show
   resource :sales, only: :show
+
+
+  resources :drivers
   root 'dashboards#show'
 end
