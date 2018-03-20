@@ -1,4 +1,6 @@
 class StyleguidesController < ActionController::Base
+  before_action :authenticate_user!
+
   layout 'styleguide'
 
   def show
