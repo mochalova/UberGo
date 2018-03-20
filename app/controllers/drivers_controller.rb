@@ -1,4 +1,8 @@
 class DriversController < ActionController::Base
+  def index
+    @drivers = Driver.all
+  end
+
   def create
     @driver = Driver.new
     if @driver.update_attributes(driver_params)

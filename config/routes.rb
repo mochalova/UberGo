@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resource :sales, only: :show
 
 
-  resources :drivers
+  resources :drivers, only: :create
+
+  namespace :admins do
+    resources :drivers
+  end
+
   root 'dashboards#show'
 end
