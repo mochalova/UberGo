@@ -1,4 +1,4 @@
-class AboutsController < ActionController::Base
+class EarningsController < ActionController::Base
   layout 'layouts/application'
 
   def show
