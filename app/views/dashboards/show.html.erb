@@ -13,7 +13,10 @@
         <a href="#" class="button"  data-toggle="modal" data-target=".modal">Стать водителем UBER</a>
       </div>
       <div class="col-sm-3 offset-sm-1">
-        <a href="#" class="button">Условия</a>
+        <%= link_to "Условия работы",
+                    { controller: "conditions",
+                      action: "show" },
+                    class: "button" %>
       </div>
       <div class="col-sm-3 offset-sm-1">
         <a href="#" class="button">Сменить партнера</a>
