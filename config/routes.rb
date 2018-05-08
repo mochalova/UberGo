@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resource :styleguide, only: :show
   resource :dashboards, only: :show
   resource :conditions, only: :show
+  resource :earnings, only: :show
   resource :abouts, only: :show
   resource :rates, only: :show
   resource :sales, only: :show
