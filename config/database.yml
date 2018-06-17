@@ -2,9 +2,7 @@ common: &common
   adapter: postgresql
   encoding: utf8
   pool: 20
-  username: ubergo
-  password:
-
+  
 development:
   <<: *common
   database: ubergo_development
