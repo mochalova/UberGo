@@ -1,4 +1,4 @@
-<%= form_with(model: driver, local: true) do |form| %>
+<%= form_with(model: driver, url: [:admins, driver], local: true) do |form| %>
   <% if driver.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
@@ -40,6 +40,12 @@
     <%= form.label :city %>
     <%= form.text_field :city, id: :driver_city %>
   </div>
+
+  <%= render 'document_fields', form: form, doc_type: :driver_license_front %>
+  <%= render 'document_fields', form: form, doc_type: :driver_license_back %>
+  <%= render 'document_fields', form: form, doc_type: :driver_tech_front %>
+  <%= render 'document_fields', form: form, doc_type: :driver_tech_back %>
+  <%= render 'document_fields', form: form, doc_type: :driver_osago %>
 
   <div class="actions">
     <%= form.submit %>

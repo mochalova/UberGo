@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180320155136) do
+ActiveRecord::Schema.define(version: 20180616092626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,17 @@ ActiveRecord::Schema.define(version: 20180320155136) do
     t.datetime "file_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "document_id"
+    t.index ["document_id"], name: "index_attaches_on_document_id"
+  end
+
+  create_table "documents", force: :cascade do |t|
+    t.integer "driver_id"
+    t.string "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["driver_id"], name: "index_documents_on_driver_id"
+    t.index ["kind"], name: "index_documents_on_kind"
   end
 
   create_table "drivers", force: :cascade do |t|

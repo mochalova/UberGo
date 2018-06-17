@@ -2,33 +2,39 @@
 
 <p>
   <strong>Last name:</strong>
-  <%= @driver.last_name %>
+  <%= driver.last_name %>
 </p>
 
 <p>
   <strong>First name:</strong>
-  <%= @driver.first_name %>
+  <%= driver.first_name %>
 </p>
 
 <p>
   <strong>Phone:</strong>
-  <%= @driver.phone %>
+  <%= driver.phone %>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= @driver.email %>
+  <%= driver.email %>
 </p>
 
 <p>
   <strong>Bank:</strong>
-  <%= @driver.bank %>
+  <%= driver.bank %>
 </p>
 
 <p>
   <strong>City:</strong>
-  <%= @driver.city %>
+  <%= driver.city %>
 </p>
 
-<%= link_to 'Edit', edit_admins_driver_path(@driver) %> |
+<h2> Document list </h2>
+
+<% driver.documents.each do |doc| %>
+  <%= render 'document_appearing', doc: doc %>
+<% end %>
+
+<%= link_to 'Edit', edit_admins_driver_path(driver) %> |
 <%= link_to 'Back', admins_drivers_path %>
