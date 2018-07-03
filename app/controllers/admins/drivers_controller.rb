@@ -1,12 +1,10 @@
-class Admins::DriversController < ActionController::Base
-  before_action :authenticate_user!
-
+class Admins::DriversController < Admins::BaseController
   def create
     update_driver new_driver
   end
 
   def update
-    update_driver driver 
+    update_driver driver
   end
 
   private
@@ -18,9 +16,9 @@ class Admins::DriversController < ActionController::Base
     end
   end
 
-  helper_method :drivers  
+  helper_method :drivers
   def drivers
-    @drivers ||= Driver.all 
+    @drivers ||= Driver.all
   end
 
   helper_method :driver
