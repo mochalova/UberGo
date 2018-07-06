@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "paperclip"
+gem 'devise', '~> 4.2'
 
 group :development, :test do
   # Adds support for Capybara system testing and selenium driver
