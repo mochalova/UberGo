@@ -33,8 +33,8 @@
 <h2> Document list </h2>
 
 <% driver.documents.each do |doc| %>
-  <%= render 'document_appearing', doc: doc %>
+  <%= render "document_appearing", doc: doc %>
 <% end %>
 
-<%= link_to 'Edit', edit_admins_driver_path(driver) %> |
-<%= link_to 'Back', admins_drivers_path %>
+<%= link_to "Edit", edit_admins_driver_path(driver) %> |
+<%= link_to "Back", admins_drivers_path %>

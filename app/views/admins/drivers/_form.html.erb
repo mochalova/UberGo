@@ -41,11 +41,11 @@
     <%= form.text_field :city, id: :driver_city %>
   </div>
 
-  <%= render 'document_fields', form: form, doc_type: :driver_license_front %>
-  <%= render 'document_fields', form: form, doc_type: :driver_license_back %>
-  <%= render 'document_fields', form: form, doc_type: :driver_tech_front %>
-  <%= render 'document_fields', form: form, doc_type: :driver_tech_back %>
-  <%= render 'document_fields', form: form, doc_type: :driver_osago %>
+  <%= render "document_fields", form: form, doc_type: :driver_license_front %>
+  <%= render "document_fields", form: form, doc_type: :driver_license_back %>
+  <%= render "document_fields", form: form, doc_type: :driver_tech_front %>
+  <%= render "document_fields", form: form, doc_type: :driver_tech_back %>
+  <%= render "document_fields", form: form, doc_type: :driver_osago %>
 
   <div class="actions">
     <%= form.submit %>

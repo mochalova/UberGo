@@ -15,13 +15,13 @@
     <%= f.text_field :bank, placeholder: "№ Карты. Название банка", class: "form-uber__field" %>
   </div>
   <div class="form-uber__item">
-    <%= f.select :city, options_for_select(['Киев', 'Днепр']), {}, class: "form-uber__field" %>
+    <%= f.select :city, options_for_select(["Киев", "Днепр"]), {}, class: "form-uber__field" %>
   </div>
-  <%= render 'driver_document_fields', form: f, doc_type: :driver_license_front %>
-  <%= render 'driver_document_fields', form: f, doc_type: :driver_license_back %>
-  <%= render 'driver_document_fields', form: f, doc_type: :driver_tech_front %>
-  <%= render 'driver_document_fields', form: f, doc_type: :driver_tech_back %>
-  <%= render 'driver_document_fields', form: f, doc_type: :driver_osago %>
+  <%= render "driver_document_fields", form: f, doc_type: :driver_license_front %>
+  <%= render "driver_document_fields", form: f, doc_type: :driver_license_back %>
+  <%= render "driver_document_fields", form: f, doc_type: :driver_tech_front %>
+  <%= render "driver_document_fields", form: f, doc_type: :driver_tech_back %>
+  <%= render "driver_document_fields", form: f, doc_type: :driver_osago %>
   <div class="form-uber__item">
     <%= f.submit %>
   </div>
