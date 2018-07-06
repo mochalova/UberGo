@@ -1,6 +1,10 @@
 class DriversController < ActionController::Base
+  def index
+    @drivers = Driver.all
+  end
+
   def create
-    @driver = Driver.new
+    @driver = Driver.new()
     if @driver.update_attributes(driver_params)
       # success
     else
@@ -17,10 +21,10 @@ class DriversController < ActionController::Base
                                    :email,
                                    :bank,
                                    :city,
-                                   driver_license_front_attributes: [:file],
-                                   driver_license_back_attributes: [:file],
-                                   driver_tech_front_attributes: [:file],
-                                   driver_tech_back_attributes: [:file],
-                                   driver_osago_attributes: [:file])
+                                   driver_license_front_attributes: [:id, :file],
+                                   driver_license_back_attributes: [:id, :file],
+                                   driver_tech_front_attributes: [:id, :file],
+                                   driver_tech_back_attributes: [:id, :file],
+                                   driver_osago_attributes: [:id, :file])
   end
 end
