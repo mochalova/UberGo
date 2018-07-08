@@ -13,3 +13,33 @@ b {
     outline: 0;
   }
 }
+
+.t431__table {
+  min-width: 100%;
+  color: #373f4c;
+  font-family: "Roboto", Helvetica;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+
+  thead {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  th {
+    padding: 10px 0 10px 15px;
+  }
+
+  tbody {
+    tr:nth-child(odd) {
+      background: #fcbc9b;
+      border-bottom: 1px solid #000;
+      border-top: 1px solid #000;
+    }
+  }
+
+  td {
+    padding: 10px 0 10px 15px;
+  }
+}
