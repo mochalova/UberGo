@@ -6,4 +6,8 @@
   position: sticky;
   top: 0px;
   z-index: 2;
+
+  @include media-breakpoint-down(md) {
+    height: unset;
+  }
 }
