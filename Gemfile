@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem "paperclip"
+gem "figaro"
+gem "aws-sdk"
 gem 'devise', '~> 4.2'
 
 group :development, :test do
