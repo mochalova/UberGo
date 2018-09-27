@@ -2,4 +2,8 @@
   background-image: url(asset-path("greeting_bg.jpg"));
   background-position: center;
   padding: 155px 0 220px;
+
+  @include media-breakpoint-down(md) {
+    padding: 30px 15px;
+  }
 }

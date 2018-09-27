@@ -16,6 +16,7 @@
 
   &:hover {
     color: $base;
+    text-decoration: none;
 
     &::after {
       width: 100%;
