@@ -1,0 +1,7 @@
+<%= form.fields_for doc_type do |n_form|  %>
+  <%= render "document_appearing", doc: n_form.object %>
+  <div class="field">
+    <%= n_form.label :file %>
+    <%= n_form.file_field :file %>
+   </div>
+<% end %>

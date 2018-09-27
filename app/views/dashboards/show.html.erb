@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+
+<div class="module module_theme_greeting">
+  <div class="text text_size_h1 text_color_white text_transform_uppercase spacer_bottom-40">
+    Стань водителем UBER
+  </div>
+  <div class="container">
+    <div class="text text_size_h3 text_color_white spacer_bottom-110">
+      UberGo - официальный представитель компании Uber в Украине.
+      <br>
+      UberGo дает возможность водителям заработать сегодня.
+      <br>
+      Свободный график, ежедневные выплаты, бонусы за поездки, скидки на топливо.
+      <br>
+      Зарабатывайте до 40000 грн/мес на лучших условиях - комиссия 6%
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-3 pb-4">
+        <a href="#" class="button"  data-toggle="modal" data-target=".modal">Стать водителем UBER</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content popup">
+      <span class="popup__close" data-dismiss="modal">×</span>
+
+      <h2 class="text text_size_h3 spacer_bottom-25">Стать водителем UBER</h2>
+
+      <%= render "driver_form" %>
+    </div>
+  </div>
+</div>

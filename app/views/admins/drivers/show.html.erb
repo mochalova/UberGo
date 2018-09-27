@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= driver.last_name %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= driver.first_name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= driver.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= driver.email %>
+</p>
+
+<p>
+  <strong>Bank:</strong>
+  <%= driver.bank %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= driver.city %>
+</p>
+
+<h2> Document list </h2>
+
+<% driver.documents.each do |doc| %>
+  <%= render "document_appearing", doc: doc %>
+<% end %>
+
+<%= link_to "Edit", edit_admins_driver_path(driver) %> |
+<%= link_to "Back", admins_drivers_path %>

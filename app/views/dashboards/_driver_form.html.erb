@@ -1,0 +1,42 @@
+<%= form_for new_driver, class: "form-uber" do |f| %>
+  <div class="form-uber__item">
+    <%= f.text_field :last_name, placeholder: "Фамилия", class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.text_field :first_name, placeholder: "Имя", class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.telephone_field :phone, placeholder: "Телефон", class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.email_field :email, placeholder: "Email", class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.text_field :bank, placeholder: "№ Карты. Название банка", class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.select :city, options_for_select(["Киев", "Днепр"]), {}, class: "form-uber__field" %>
+  </div>
+  <div class="form-uber__item">
+    <label>Права</label>
+    <%= render "driver_document_fields", form: f, doc_type: :driver_license_front %>
+  <div class="form-uber__item">
+    <label>Права обратная сторона</label>
+    <%= render "driver_document_fields", form: f, doc_type: :driver_license_back %>
+  </div>
+  <div class="form-uber__item">
+    <label>Техпаспорт</label>
+    <%= render "driver_document_fields", form: f, doc_type: :driver_tech_front %>
+  </div>
+  <div class="form-uber__item">
+    <label>Техпаспорт обратная сторона</label>
+    <%= render "driver_document_fields", form: f, doc_type: :driver_tech_back %>
+  </div>
+  <div class="form-uber__item">
+    <label>Страховой полис ОСАГО</label>
+    <%= render "driver_document_fields", form: f, doc_type: :driver_osago %>
+  </div>
+  <div class="form-uber__item">
+    <%= f.submit "Отправить" %>
+  </div>
+<% end %>

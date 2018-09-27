@@ -1,0 +1,381 @@
+<div class="container">
+  <h1 class="text text_size_h1">UberGo Styleguide page</h1>
+
+  <h2 class="text text_size_h2">Branches</h2>
+
+  <ul>
+    <li>branch name start with 'U' (UberGo)</li>
+    <li>then we add trello ticket number</li>
+    <li>then we add branch name</li>
+    <li>use '-' to separate</li>
+  </ul>
+
+  <div>For example:</div>
+
+  <code>U-2-create-styleguide-page</code>
+
+  <h2 class="text text_size_h2">Project Code style</h2>
+
+  <ul>
+    <li>Add newline at end of file</li>
+    <li>No spaces in end of line</li>
+    <li>Use 2 spaces for indentation</li>
+  </ul>
+
+  <h2 class="text text_size_h2">Files</h2>
+  <ul>
+    <li>
+      Don't use capital letters in file names. For example OS X is case insensitive.
+    </li>
+    <li>
+      Use '_' in partial names. For example: _test.scss
+    </li>
+  </ul>
+
+  <h2 class="text text_size_h2">Layout</h2>
+
+  <div class="text">
+    Use <a href="https://v4-alpha.getbootstrap.com/layout/grid/" target="_blank">bootstrap 4 grid</a> for layout.
+    <br />
+    For example two columns:
+  </div>
+
+  <code>
+    &lt;div class="row"&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;123<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm-6"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;321<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &lt;/div&gt;
+  </code>
+
+  <div>or</div>
+
+  <code>
+    &lt;div class="row"&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;123<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &nbsp;&nbsp;&lt;div class="col-sm"&gt;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;321<br />
+    &nbsp;&nbsp;&lt;/div&gt;<br />
+    &lt;/div&gt;
+  </code>
+
+  <div class="text">Result:</div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      First half
+    </div>
+    <div class="col-sm-6">
+      Second half
+    </div>
+  </div>
+
+  <div>or</div>
+
+  <div class="row">
+    <div class="col-sm">
+      First half
+    </div>
+    <div class="col-sm">
+      Second half
+    </div>
+  </div>
+
+  <h2 class="text text_size_h2">Css</h2>
+
+  <ul class="text">
+    <li>Top-level css files should have only (@import). Don't write any custom styles.</li>
+    <li>Use (@import) for each file. Don't use (@import "components/**/*")</li>
+    <li>List of top-level files is in: "config/initializers/assets.rb"</li>
+    <li>
+      Use
+      <%= link_to "BEM", "https://en.bem.info/methodology/", target: "_blank" %>
+      methodology with some custom extentions
+    </li>
+    <li>
+      Don't use "px" in end of 0. For example:
+      <code>padding: 30px 10px 0;</code>
+    </li>
+    <li>
+      Use new line for each css property. For example:
+      <div>
+        <code>
+          .test1 {<br />
+          &nbsp;&nbsp;background: red;<br />
+          }
+        </code>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="text text_size_h2">Colors</h2>
+  <ul class="text">
+    <li>
+      Use color-variable if it is possible. All color variables are in file:
+      <code>app/assets/stylesheets/variables.scss</code>
+    </li>
+    <li>
+      Also you can use rgba with variable. For example:
+      <code>rgba($base, 0.5)</code>
+    </li>
+    <li>
+      There should not be many variables in site.
+    </li>
+  </ul>
+
+  <div class="text">Colors list:</div>
+
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="demo-color demo-color_background_base">
+        <div class="demo-color__title text text_color_white">$base</div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="demo-color demo-color_background_white">
+        <div class="demo-color__title text">$white</div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="demo-color demo-color_background_link-activity">
+        <div class="demo-color__title text">$link-activity</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text text_size_h2">Text</h2>
+  <div class="text">
+    Default font in site is: "Roboto" from google-fonts.
+  </div>
+  <div class="text">
+    Block "text" has default settings:
+  </div>
+  <ul>
+    <li class="text">color: $base;</li>
+    <li class="text">font-family: "Roboto", Helvetica;</li>
+    <li class="text">font-size: 16px;</li>
+    <li class="text">font-weight: 300;</li>
+    <li class="text">line-height: 22px;</li>
+  </ul>
+  <div class="text">For example:</div>
+  <div class="text">This is regular text</div>
+  <div class="text"><strong>This is bold text</strong></div>
+
+  <h3 class="text text_size_h3">Text colors</h3>
+  <div class="text">Block "text" has color modifiers:</div>
+  <div class="text">text_color_white. Example:</div>
+  <div class="demo-color demo-color_background_base">
+    <div class="text text_color_white">This is example of "text text_color_white"</div>
+  </div>
+  <h3 class="text text_size_h3">Text position</h3>
+  <div class="text">Block "text" has position modifiers:</div>
+  <div class="text">text_position_right. Example:</div>
+  <div class="text text_position_right">This is example of "text text_position_right"</div>
+  <h3 class="text text_size_h3">Text transform</h3>
+  <div class="text">Block "text" has transform modifiers:</div>
+  <div class="text">text_transform_uppercase. Example:</div>
+  <div class="text text_transform_uppercase">
+    This is example of "text text_transform_uppercase"
+  </div>
+  <h3 class="text text_size_h3">Text size</h3>
+  <div class="text">Block "text" has size modifiers:</div>
+  <div class="text">text_size_h1. Example:</div>
+  <div class="text text_size_h1">
+    text text_size_h1
+  </div>
+  <div class="text">text_size_h2. Example:</div>
+  <div class="text text_size_h2">
+    text text_size_h2
+  </div>
+  <div class="text">text_size_h3. Example:</div>
+  <div class="text text_size_h3">
+    text text_size_h3
+  </div>
+  <div class="text">text_size_14. Example:</div>
+  <div class="text text_size_14">
+    text text_size_14
+  </div>
+
+  <h2 class="text text_size_h2">Headers</h2>
+  <div class="text">This is example of main site header</div>
+</div>
+
+<div>
+  <%= render "shared/header" %>
+</div>
+
+<div class="container">
+  <h2 class="text text_size_h2">Modules</h2>
+  <div class="text">
+    Module is a container with some spaces or backgrounds
+  </div>
+  <h3 class="text text_size_h3">Greeting module</h3>
+  <div class="text">
+    Greeting module have top and bottom spaces and background image
+  </div>
+</div>
+
+<div class="module module_theme_greeting">
+  <div class="text text_color_white">
+    Greeting module example
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text text_size_h3">Inner module</h3>
+  <div class="text">
+    Inner module has padding top
+  </div>
+</div>
+<div class="module module_theme_inner">
+  <div class="text">
+    Inner module example
+  </div>
+</div>
+
+<div class="container">
+  <h3 class="text text_size_h3">Driver module</h3>
+  <div class="text">
+    Driver module have top and bottom spaces and background image
+  </div>
+</div>
+<div class="module module_theme_driver">
+  <div class="text">
+    Driver module example
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="text text_size_h2">Spacers</h2>
+  <div class="text">
+    There is different spacers in site
+  </div>
+  <h3 class="text text_size_h3">Spacer top 70</h3>
+  <div class="text">
+    Add padding top 70px.
+  </div>
+  <div class="spacer_top-70">
+    Example spacer_top-70
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 25</h3>
+  <div class="text">
+    Add padding top 25px.
+  </div>
+  <div class="spacer_bottom-25">
+    Example spacer_bottom-25
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 40</h3>
+  <div class="text">
+    Add padding top 40px.
+  </div>
+  <div class="spacer_bottom-40">
+    Example spacer_bottom-40
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 50</h3>
+  <div class="text">
+    Add padding top 50px.
+  </div>
+  <div class="spacer_bottom-50">
+    Example spacer_bottom-50
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 75</h3>
+  <div class="text">
+    Add padding top 75px.
+  </div>
+  <div class="spacer_bottom-75">
+    Example spacer_bottom-75
+  </div>
+  <h3 class="text text_size_h3">Spacer bottom 110</h3>
+  <div class="text">
+    Add padding top 110px.
+  </div>
+  <div class="spacer_bottom-110">
+    Example spacer_bottom-110
+  </div>
+
+  <h2 class="text text_size_h2">Category-image</h2>
+  <div class="text">
+    There is category image with max-width: 100%. Example:
+  </div>
+  <%= image_tag("car_2.png", class: "category-image") %>
+
+  <h2 class="text text_size_h2">Buttons</h2>
+  <div class="text">
+    Default button has full width. You can set button width with some wrapper. Example:
+  </div>
+
+  <a href="#" class="button">Стать водителем UBER</a>
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <a href="#" class="button">Стать водителем UBER</a>
+    </div>
+  </div>
+
+  <h3 class="text text_size_h3">Menu button</h3>
+  <div class="text">
+    There is buttons in header menu. They have bigger height. Also they have dynamic hover background color. You can set start color in 'app/assets/stylesheets/_variables.scss' in '$menu-link-start-color'. Also you should set total header menu buttons in same file in '$menu-link-total-count'. Header button example:
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <a href="#" class="button button_type_header-menu">button button_type_header-menu</a>
+    </div>
+  </div>
+
+  <h2 class="text text_size_h2">Lists</h2>
+  <div class="text">
+    Default "list" have squars at the begining of each "list__item". For example:
+  </div>
+  <ul class="list">
+    <li class="list__item">
+      list
+    </li>
+    <li class="list__item">
+      list__item
+    </li>
+  </ul>
+
+  <h2 class="text text_size_h2">Modals</h2>
+  <div class="text">
+    We use <a href="https://getbootstrap.com/docs/4.0/components/modal/" target="_blank">bootstrap modals</a>. Should require some js: 'bootstrap/util', 'bootstrap/modal' and some css: 'bootstrap/modal', 'bootstrap/mixins'. Also we use 'popup' class instead Bootstrap defaults. Example:
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 offset-sm-4">
+      <span class="button" data-toggle="modal" data-target=".modal">
+        Show modal
+      </span>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content popup">
+        <span class="popup__close" data-dismiss="modal">×</span>
+        Some modal
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text text_size_h2">Forms</h2>
+  <div class="text">
+    Forms has class "form-uber". Also there is wrapper "form-uber__item", and fields with "form-uber__field" class. Example:
+  </div>
+
+  <%= form_tag "#", method: :put, class: "form-uber" do %>
+    <div class="form-uber__item">
+      <%= text_field_tag "last-name", nil, placeholder: "Фамилия", class: "form-uber__field" %>
+    </div>
+    <div class="form-uber__item">
+      <%= select_tag "count",
+                     "<option>Киев</option>
+                      <option>Днепр</option>".html_safe,
+                      class: "form-uber__field" %>
+    </div>
+  <% end %>
+</div>
